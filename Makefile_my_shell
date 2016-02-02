@@ -1,0 +1,12 @@
+C = gcc
+CFLAGS = -std=c99 -I.
+PROGRAM = my_shell
+
+all: my_shell.c
+	$(CC) -o $(PROGRAM) my_shell.c $(CFLAGS)
+
+run: $(PROGRAM)
+	./$(PROGRAM)
+
+clean:
+	rm $(PROGRAM)
