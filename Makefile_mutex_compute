@@ -1,0 +1,12 @@
+CC = gcc
+CFLAGS = -std=c99 -lpthread -I.
+PROGRAM = mutex_compute
+
+all: mutex_compute.c
+	$(CC) -o $(PROGRAM) mutex_compute.c $(CFLAGS)
+
+clean:
+	rm $(PROGRAM)
+
+run: $(PROGRAM)
+	./$(PROGRAM)
