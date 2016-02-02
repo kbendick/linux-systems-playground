@@ -1,0 +1,12 @@
+CC = gcc
+CFLAGS = -std=c99 -I.
+PROGRAM = banker
+
+all: banker.c
+	$(CC) -o $(PROGRAM) banker.c $(CFLAGS)
+
+clean:
+	rm $(PROGRAM)
+
+run: $(PROGRAM)
+	./$(PROGRAM)
