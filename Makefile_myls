@@ -1,0 +1,12 @@
+CC = gcc
+CFLAGS = -std=c99 -I -w.
+PROGRAM = myls
+
+all: myls.c
+	$(CC) -o $(PROGRAM) myls.c $(CFLAGS)
+
+clean:
+	rm $(PROGRAM)
+
+run: $(PROGRAM)
+	./$(PROGRAM)
